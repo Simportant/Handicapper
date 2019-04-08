@@ -1,0 +1,14 @@
+C:\Work Area\MS_Projects\Handicapper\Handicapper\bin\Release\Handicapper.exe.config
+C:\Work Area\MS_Projects\Handicapper\Handicapper\bin\Release\Handicapper.exe
+C:\Work Area\MS_Projects\Handicapper\Handicapper\bin\Release\Handicapper.pdb
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.frmAddPlayerRound.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.frmMain.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.frmPlayerHistory.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.Properties.Resources.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.csproj.GenerateResource.Cache
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.exe
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.pdb
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.frmAddNew.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.frmLeague.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.frmInfo.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Release\Handicapper.csproj.CoreCompileInputs.cache

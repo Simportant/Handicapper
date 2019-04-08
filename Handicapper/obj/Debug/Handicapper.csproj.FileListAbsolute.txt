@@ -1,0 +1,14 @@
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.frmMain.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.Properties.Resources.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.csproj.GenerateResource.Cache
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.exe
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.pdb
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.frmPlayerHistory.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.frmAddPlayerRound.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\bin\Handicapper.exe.config
+C:\Work Area\MS_Projects\Handicapper\Handicapper\bin\Handicapper.exe
+C:\Work Area\MS_Projects\Handicapper\Handicapper\bin\Handicapper.pdb
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.frmAddNew.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.frmLeague.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.frmInfo.resources
+C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.csproj.CoreCompileInputs.cache
