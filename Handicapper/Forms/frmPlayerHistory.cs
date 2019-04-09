@@ -36,15 +36,16 @@ namespace Handicapper
         private void cmdAddRound_Click(object sender, EventArgs e)
         {
             try {
-                frmAddPlayerRound ln = new frmAddPlayerRound(_CurrentPlayer);
-                ln.ShowDialog();
-                if (ln.DialogResult == DialogResult.Yes)
+                using (frmAddPlayerRound ln = new frmAddPlayerRound(_CurrentPlayer))
                 {
-                    _DataChanged = true;
-                    Prepare(_CurrentPlayer.PlayerID);
-                }
-                ln.Dispose();
+                    ln.ShowDialog();
+                    if (ln.DialogResult == DialogResult.Yes)
+                    {
+                        _DataChanged = true;
+                        Prepare(_CurrentPlayer.PlayerID);
+                    }
 
+                }
             }
             catch (Exception ex)
             {
@@ -141,6 +142,7 @@ namespace Handicapper
                     this.dgvHistory.Rows.Clear();
                     this.dgvHistory.Refresh();
                 }
+
                 List<Round> history = new List<Round>();
                 history = Helpers.s_Rounds.RoundsCompleted(_CurrentPlayer.PlayerID);                
                 this.dgvHistory.DataSource = history;

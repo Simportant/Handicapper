@@ -24,19 +24,15 @@ namespace Handicapper
             Application.Exit();
         }
         private void mnuOpenLeague_Click(object sender, EventArgs e)
-        {
-           
+        {  
             try {
                 FileUpdate();
-
-                frmLeague lg = new frmLeague();
-                lg.ShowDialog();
-
-                if (lg.DialogResult == DialogResult.Yes)
-                    PopulateDataGrid();
-
-                lg.Dispose();
-
+                using (frmLeague lg = new frmLeague())
+                {
+                    lg.ShowDialog();
+                    if (lg.DialogResult == DialogResult.Yes)
+                        PopulateDataGrid();
+                }
             }
             catch (Exception ex)
             {
@@ -46,13 +42,12 @@ namespace Handicapper
         private void mnuAddPlayer_Click(object sender, EventArgs e)
         {
             try {
-
-                frmAddNew ln = new frmAddNew(Helpers.NewType.Player);
-                ln.ShowDialog();
-                if (ln.DialogResult == DialogResult.Yes)
-                    PopulateDataGrid();
-                ln.Dispose();
-                
+                using (frmAddNew ln = new frmAddNew(Helpers.NewType.Player))
+                {
+                    ln.ShowDialog();
+                    if (ln.DialogResult == DialogResult.Yes)
+                        PopulateDataGrid();
+                }                
             }
             catch (Exception ex)
             {
@@ -81,15 +76,16 @@ namespace Handicapper
 
                 int ID = (int)this.dgvPlayers.Rows[e.RowIndex].Cells[0].Value;
 
-                frmPlayerHistory ln = new frmPlayerHistory(ID);
-                ln.ShowDialog();                                
-                if (ln.DialogResult == DialogResult.Yes)
+                using (frmPlayerHistory ln = new frmPlayerHistory(ID))
                 {
-                    _DataHasChanged = true;
-                    PopulateDataGrid();
-                }
+                    ln.ShowDialog();
+                    if (ln.DialogResult == DialogResult.Yes)
+                    {
+                        _DataHasChanged = true;
+                        PopulateDataGrid();
+                    }
 
-                ln.Dispose();
+                }
             }
             catch (Exception ex)
             {
