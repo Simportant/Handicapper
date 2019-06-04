@@ -22,7 +22,7 @@ namespace Handicapper
             else
                 dlg = new System.Windows.Forms.SaveFileDialog();
 
-            dlg.Filter = "csv files (*.csv)|*.csv|All files (*.*)|*.*";
+            dlg.Filter = "txt files (*.txt)|*.txt|All files (*.*)|*.*";
             dlg.FilterIndex = 1;
             dlg.RestoreDirectory = true;
             dlg.InitialDirectory = Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);

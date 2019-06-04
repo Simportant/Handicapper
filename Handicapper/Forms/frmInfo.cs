@@ -14,7 +14,6 @@ namespace Handicapper
 
         private void FillText()
         {
-
             if (Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + AppDomain.CurrentDomain.RelativeSearchPath + "Info\\"))
             {
                 string fl = AppDomain.CurrentDomain.BaseDirectory + AppDomain.CurrentDomain.RelativeSearchPath + "Info\\Clause23.txt";
@@ -24,9 +23,9 @@ namespace Handicapper
                     this.txtInfo.Text = "Cannot find information File";
             }
             else
-                this.txtInfo.Text = "Cannot find information Folder";
-            
+                this.txtInfo.Text = "Cannot find information Folder";            
         }
+
 
         private void cmdClose_Click(object sender, EventArgs e)
         {

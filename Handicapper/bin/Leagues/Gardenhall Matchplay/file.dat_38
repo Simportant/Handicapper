@@ -7,7 +7,7 @@ Player,6,Paul McGrath,24,24,4,First Handicap Initially set as 24.0 (03 July 2018
 Player,2,Peter Gordon,25.9,26,4,Net Score within Buffer so no change
 Player,11,Ross Yule,0,0,4,Not yet played 3 Rounds so Handicap not Calculated.
 Player,5,Steven McGarva,19.7,20,3,Net Score within Buffer so no change
-Player,4,Willie Gracie,18,18,3,Handicap Adjustmend of 2.0 applied (04 June 2019)
+Player,4,Willie Gracie,20,20,3,Net Score within Buffer so no change
 Round,7,1,01 April 2018,Lochgreen,71,102,96,25,25,0,Not yet played 3 Rounds so Handicap not Calculated.,
 Round,2,1,01 April 2018,Lochgreen,71,101,97,26,26,0,Not yet played 3 Rounds so Handicap not Calculated.,
 Round,1,1,21 April 2018,Langlands,68,109,102,34,34,0,Not yet played 3 Rounds so Handicap not Calculated.,
@@ -109,4 +109,3 @@ Round,10,22,28 April 2019,Darley,70,106,95,25,7,18,Handicap Increased from 18.5 
 Round,5,28,28 April 2019,Darley,70,108,95,25,5,20,Handicap Increased from 19.6 to 19.7 (29 April 2019),
 Round,10,23,05 May 2019,Darley,70,103,94,24,5,19,Handicap Increased from 18.6 to 18.7 (07 May 2019),
 Round,5,29,05 May 2019,Darley,70,96,91,21,1,20,Net Score within Buffer so no change,
-Round,4,9,04 June 2019,Adjustment,0,0,2,0,0,20,Handicap Adjustmend of 2.0 applied (04 June 2019),

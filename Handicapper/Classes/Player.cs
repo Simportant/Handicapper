@@ -34,17 +34,41 @@ namespace Handicapper
         
         public double CreateAdjustment(int Adjustment)
         {
-            double newHandicap = 0.0;
-            BufferCategory CurrentCategory = new BufferCategory();
-            CurrentCategory = Helpers.s_Buffers.GetCategory(_Category);
-            
-            newHandicap = _Actual - Adjustment;
-            _Notes = string.Concat("Handicap Adjustmend of ", Adjustment.ToString("#0.0"), " applied (", DateTime.Now.ToLongDateString(), ")");
+            try
+            {
+                double newHandicap = 0.0;
+                double oldHandicap = _Actual;
+                Round adjustmentRound = new Round();
+                BufferCategory CurrentCategory = new BufferCategory();
 
-            newHandicap = Math.Min(newHandicap, 28.0);
-            _Playing = Convert.ToInt32(newHandicap);
-            _Actual = Math.Round(newHandicap, 1);
-            _Category = CheckCategory(_Actual, CurrentCategory);
+                CurrentCategory = Helpers.s_Buffers.GetCategory(_Category);            
+                newHandicap = _Actual - Adjustment;
+                _Notes = string.Concat("Handicap Adjustment of ", Adjustment.ToString("#0.0"), " applied (", DateTime.Now.ToLongDateString(), ")");
+                newHandicap = Math.Min(newHandicap, 28.0);
+                _Playing = Convert.ToInt32(newHandicap);
+                _Actual = Math.Round(newHandicap, 1);
+                _Category = CheckCategory(_Actual, CurrentCategory);
+            
+                adjustmentRound.ActualStrokes = 0;
+                adjustmentRound.AdjustedStrokes = Adjustment;
+                adjustmentRound.Course = "Adjustment";                
+                adjustmentRound.Date = DateTime.Now.ToLongDateString();
+                adjustmentRound.HandicapUsed = Convert.ToInt32(oldHandicap);
+                adjustmentRound.PlayerID = _ID;
+                adjustmentRound.Sequence = _Rounds + 1;
+                adjustmentRound.SSI = 0;
+                adjustmentRound.Score_Gross = 0;
+                adjustmentRound.Score_Net = 0;
+                adjustmentRound.Notes = _Notes;
+
+                Helpers.s_Rounds.AddRound(adjustmentRound);
+            }
+            catch (Exception ex)
+            {
+                Helpers.Log(ex.Message.ToString(), System.Reflection.MethodBase.GetCurrentMethod().Name, ErrorLogger.LogLevel.ERROR);
+                throw;
+            }
+            
             _DataIsDirty = true;
             return _Actual;
         }

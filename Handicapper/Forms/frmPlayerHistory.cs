@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -44,7 +45,6 @@ namespace Handicapper
                         _DataChanged = true;
                         Prepare(_CurrentPlayer.PlayerID);
                     }
-
                 }
             }
             catch (Exception ex)
@@ -59,7 +59,7 @@ namespace Handicapper
         }
         private void cmdExtract_Click(object sender, EventArgs e)
         {
-            string result = ExtractPlayerDetails();
+            string result = ExtractPlayerDetails(false);
             if (result != string.Empty)
                 MessageBox.Show("File saved as " + result);
         }
@@ -73,8 +73,14 @@ namespace Handicapper
                 if (adjustment > 0 && adjustment < 10)
                 {
                     _CurrentPlayer.CreateAdjustment(adjustment);
-                    // add this to rounds and refresh where required.
-                    FillDetail();
+                    _DataChanged = true;
+                    // add this to rounds and refresh where required.                    
+                    Prepare(_CurrentPlayer.PlayerID);
+
+                    if (MessageBox.Show("Do you want to create a letter? ", Helpers.Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                    {
+                        ExtractPlayerDetails(true);
+                    }
                 }
                 else
                     MessageBox.Show("This is not a valid adjustment value", Helpers.Title);
@@ -186,7 +192,7 @@ namespace Handicapper
             return adjustment;
             }
 
-        private string ExtractPlayerDetails()
+        private string ExtractPlayerDetails(bool adjustmentLetter)
         {
             try {
                 string path = Helpers.OpenFile(Helpers.FileType.ForExtracting);
@@ -203,14 +209,42 @@ namespace Handicapper
                         str.Append("Actual Handicap:".PadRight(20)).Append(_CurrentPlayer.Actual.ToString("#0.0")).AppendLine();
                         str.Append("Category:".PadRight(20)).Append(_CurrentPlayer.Category.ToString()).AppendLine();
                         fl.WriteEntry(str.ToString());
-                                               
                         str.Clear();
+
+                        if (adjustmentLetter)
+                        {
+                            fl.WriteEntry("");
+                            fl.WriteEntry("*".PadLeft(50, '*'));
+                            fl.WriteEntry("ADJUSTMENT");
+                            fl.WriteEntry("*".PadLeft(50, '*'));
+
+                            if (Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + AppDomain.CurrentDomain.RelativeSearchPath + "Info\\"))
+                            {
+                                string info = AppDomain.CurrentDomain.BaseDirectory + AppDomain.CurrentDomain.RelativeSearchPath + "Info\\Clause23.txt";
+                                if (File.Exists(info))
+                                {
+                                    using (FileAccessor file = new FileAccessor(info, Helpers.FileType.ForReading))
+                                    {
+                                       str.Append( file.DataFile.ReadToEnd());
+                                    }
+                                }   
+                                else
+                                    str.Append("Cannot find information File");
+                            }
+                            else
+                                str.Append("Cannot find information Folder");
+                            
+                            fl.WriteEntry(str.ToString());
+                            str.Clear();
+                            fl.WriteEntry("");
+                        }
+                        
                         str.Append("Date".PadRight(20));
                         str.Append("Course".PadRight(12));
                         str.Append("SSI".PadRight(5));
                         str.Append("Score".PadRight(7));
                         str.Append("Adjusted".PadRight(10));
-                        str.Append("Handicap".PadRight(10));
+                        str.Append("Previous".PadRight(10));
                         str.Append("Net".PadRight(12));
                         str.Append("Notes");
                         fl.WriteEntry(str.AppendLine().ToString());
