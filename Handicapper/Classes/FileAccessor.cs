@@ -11,6 +11,7 @@ namespace Handicapper
         
         private FileStream _Stream;
         private StreamWriter _Writer;
+
         private FileStatus _FileStatus;
         private readonly Helpers.FileType _FileType;
         private bool _disposed;
