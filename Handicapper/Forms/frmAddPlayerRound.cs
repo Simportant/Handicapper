@@ -18,8 +18,7 @@ namespace Handicapper
                 InitializeComponent();
 
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 Helpers.Log(ex.Message.ToString(), System.Reflection.MethodBase.GetCurrentMethod().Name, ErrorLogger.LogLevel.ERROR);
                 throw;
             }
@@ -54,8 +53,7 @@ namespace Handicapper
                 MessageBox.Show("Cannot add this Round as the data is incomplete");
 
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 Helpers.Log(ex.Message.ToString(), System.Reflection.MethodBase.GetCurrentMethod().Name, ErrorLogger.LogLevel.ERROR);
                 throw;
             }
@@ -79,8 +77,7 @@ namespace Handicapper
                 else
                     return true;
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 Helpers.Log(ex.Message.ToString(), System.Reflection.MethodBase.GetCurrentMethod().Name, ErrorLogger.LogLevel.ERROR);
                 throw;
             }
@@ -92,8 +89,7 @@ namespace Handicapper
                 Helpers.s_Rounds.AddRound(_CurrentRound);
                 _CurrentPlayer.UpdateRoundsPlayed(_CurrentRound.Sequence);
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 Helpers.Log(ex.Message.ToString(), System.Reflection.MethodBase.GetCurrentMethod().Name, ErrorLogger.LogLevel.ERROR);
                 throw;
             }
@@ -112,8 +108,7 @@ namespace Handicapper
                 _CurrentRound.Score_Gross = _CurrentRound.AdjustedStrokes - _CurrentRound.SSI;
                 _CurrentRound.Score_Net = _CurrentRound.Score_Gross - _CurrentRound.HandicapUsed;
             }
-            catch (Exception ex)
-            {
+            catch (Exception ex) {
                 Helpers.Log(ex.Message.ToString(), System.Reflection.MethodBase.GetCurrentMethod().Name, ErrorLogger.LogLevel.ERROR);
                 throw;
             }

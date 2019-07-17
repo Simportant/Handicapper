@@ -1,13 +1,13 @@
 Player,7,Billy Bingo,22.6,23,4,First Handicap Initially set as 22.6 (09 August 2018)
 Player,8,Duncal Caldwell,25.9,26,4,Handicap Increased from 25.8 to 25.9 (29 April 2019)
 Player,1,Geaorge Burns,26.8,27,4,Net Score within Buffer so no change
-Player,10,James McIlgorm,16.9,17,3,Handicap Reduced from 17.2 to 16.9 (15 July 2019)
+Player,10,James McIlgorm,18.8,19,3,Handicap Increased from 18.7 to 18.8 (10 June 2019)
 Player,9,John McCausland,20.4,20,3,Handicap Increased from 20.3 to 20.4 (01 October 2018)
 Player,6,Paul McGrath,24,24,4,First Handicap Initially set as 24.0 (03 July 2018)
 Player,2,Peter Gordon,26,26,4,Handicap Increased from 25.9 to 26.0 (10 June 2019)
 Player,11,Ross Yule,0,0,4,Not yet played 3 Rounds so Handicap not Calculated.
-Player,5,Steven McGarva,18.9,19,3,Handicap Increased from 18.8 to 18.9 (15 July 2019)
-Player,4,Willie Gracie,18.8,19,3,Handicap Increased from 18.7 to 18.8 (25 June 2019)
+Player,5,Steven McGarva,19.8,20,3,Handicap Increased from 19.7 to 19.8 (10 June 2019)
+Player,4,Willie Gracie,18.6,19,3,Handicap Increased from 18.5 to 18.6 (10 June 2019)
 Round,7,1,01 April 2018,Lochgreen,71,102,96,25,25,0,Not yet played 3 Rounds so Handicap not Calculated.,
 Round,2,1,01 April 2018,Lochgreen,71,101,97,26,26,0,Not yet played 3 Rounds so Handicap not Calculated.,
 Round,1,1,21 April 2018,Langlands,68,109,102,34,34,0,Not yet played 3 Rounds so Handicap not Calculated.,
@@ -114,17 +114,3 @@ Round,4,10,09 June 2019,Langlands,68,98,91,23,5,18,Handicap Increased from 18.5 
 Round,10,24,09 June 2019,Langlands,68,97,93,25,6,19,Handicap Increased from 18.7 to 18.8 (10 June 2019),
 Round,5,30,09 June 2019,Langlands,68,102,93,25,5,20,Handicap Increased from 19.7 to 19.8 (10 June 2019),
 Round,2,13,09 June 2019,Langlands,68,108,100,32,6,26,Handicap Increased from 25.9 to 26.0 (10 June 2019),
-Round,4,11,16 June 2019,Langlands,68,91,90,22,3,19,Net Score within Buffer so no change,
-Round,5,31,16 June 2019,Darley,70,104,94,24,4,20,Handicap Increased from 19.8 to 19.9 (17 June 2019),
-Round,10,25,16 June 2019,Darley,70,84,83,13,-6,19,Handicap Reduced from 18.8 to 17.0 (17 June 2019),
-Round,4,12,23 June 2019,Castle,72,110,99,27,8,19,Handicap Increased from 18.6 to 18.7 (25 June 2019),
-Round,4,13,24 June 2019,The Old Course,71,104,100,29,10,19,Handicap Increased from 18.7 to 18.8 (25 June 2019),
-Round,5,32,23 June 2019,Castle,72,103,91,19,-1,20,Handicap Reduced from 19.9 to 19.6 (25 June 2019),
-Round,5,33,24 June 2019,The Old Course,71,103,96,25,5,20,Handicap Increased from 19.6 to 19.7 (25 June 2019),
-Round,10,26,30 June 2019,Lochgreen,71,103,93,22,5,17,Handicap Increased from 17.0 to 17.1 (01 July 2019),
-Round,5,34,30 June 2019,Lochgreen,71,90,88,17,-3,20,Handicap Reduced from 19.7 to 18.8 (01 July 2019),
-Round,10,27,07 July 2019,Lochgreen,71,99,94,23,6,17,Handicap Increased from 17.1 to 17.2 (08 July 2019),
-Round,5,35,07 July 2019,Lochgreen,71,96,92,21,2,19,Net Score within Buffer so no change,
-Round,5,36,12 July 2019,Langlands,68,91,89,21,2,19,Net Score within Buffer so no change,
-Round,5,37,14 July 2019,Darley,70,104,94,24,5,19,Handicap Increased from 18.8 to 18.9 (15 July 2019),
-Round,10,28,14 July 2019,Darley,70,90,86,16,-1,17,Handicap Reduced from 17.2 to 16.9 (15 July 2019),
