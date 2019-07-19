@@ -24,13 +24,7 @@ namespace Handicapper
 
         public int RoundsPlayed(int PlayerID)
         {
-            int cnt = 0;
-            foreach (Round rnd in AllRoundsList)
-            {
-                if (rnd.PlayerID == PlayerID)
-                    cnt += 1;
-            }
-            return cnt;
+            return AllRoundsList.Count(p => p.PlayerID == PlayerID);
         }
 
 

@@ -78,9 +78,7 @@ namespace Handicapper
                     Prepare(_CurrentPlayer.PlayerID);
 
                     if (MessageBox.Show("Do you want to create a letter? ", Helpers.Title, MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
-                    {
                         ExtractPlayerDetails(true);
-                    }
                 }
                 else
                     MessageBox.Show("This is not a valid adjustment value", Helpers.Title);
@@ -181,15 +179,10 @@ namespace Handicapper
         }        
         private int ValidAdjustment()
         {
-            int adjustment = 0;
-
             if (Helpers.IsNumeric(this.txtAdjustment.Text))
-                adjustment = Helpers.NullToInt(this.txtAdjustment.Text);
-
-            if (adjustment > _CurrentPlayer.Actual)
-                adjustment = 0;
-
-            return adjustment;
+                return Helpers.NullToInt(this.txtAdjustment.Text);
+            else
+                return 0;
             }
 
         private string ExtractPlayerDetails(bool adjustmentLetter)
