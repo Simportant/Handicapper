@@ -151,7 +151,6 @@ namespace Handicapper
                     else
                         rw.DefaultCellStyle.ForeColor = Color.Black;
                 }
-
             }
             catch (Exception ex)
             {

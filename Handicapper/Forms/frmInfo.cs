@@ -14,9 +14,9 @@ namespace Handicapper
 
         private void FillText()
         {
-            if (Directory.Exists(AppDomain.CurrentDomain.BaseDirectory + AppDomain.CurrentDomain.RelativeSearchPath + "Info\\"))
+            if (Directory.Exists(string.Concat(AppDomain.CurrentDomain.BaseDirectory, AppDomain.CurrentDomain.RelativeSearchPath, "Info\\")))
             {
-                string fl = AppDomain.CurrentDomain.BaseDirectory + AppDomain.CurrentDomain.RelativeSearchPath + "Info\\Clause23.txt";
+                string fl = string.Concat(AppDomain.CurrentDomain.BaseDirectory, AppDomain.CurrentDomain.RelativeSearchPath, "Info\\Clause23.txt");
                 if (File.Exists(fl))
                     this.txtInfo.LoadFile(fl, RichTextBoxStreamType.PlainText);
                 else

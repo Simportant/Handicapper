@@ -11,4 +11,3 @@ C:\Work Area\MS_Projects\Handicapper\Handicapper\bin\Handicapper.pdb
 C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.frmAddNew.resources
 C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.frmLeague.resources
 C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.frmInfo.resources
-C:\Work Area\MS_Projects\Handicapper\Handicapper\obj\Debug\Handicapper.csprojResolveAssemblyReference.cache

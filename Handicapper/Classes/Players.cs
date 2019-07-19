@@ -39,6 +39,7 @@ namespace Handicapper
             else
                 return PlayersList.Max(t => t.PlayerID) + 1;
         }
+
         public bool DoesPlayerExist(string name)
         {
             // This is a BindingList<T> so the method Exists() or Lambda Contains<> is not available to us.
@@ -48,8 +49,8 @@ namespace Handicapper
                     return true;
             }
             return false;
-
         }
+
         public bool PlayerDataChanged()
         {
             foreach (Player plr in PlayersList)
